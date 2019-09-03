@@ -6,22 +6,26 @@ suitable for publication on GitHub Pages or wherever.  The
 [widdershins](https://github.com/Mermade/widdershins) library is
 responsible for converting the YAML/JSON into something Slate can use.
 
+
+
 ## To Build
 
 ``` shell
-$ docker build -t api-doc .
+$ docker build -t api-doc-pipeline .
 ```
 
 ## To Use
 
-Assuming the API YAML specification file is in /projects/api:
+Assuming the API YAML specification file is `/projects/api/api.yaml`:
 
 ``` shell
-$ docker run -v /projects/api:/work/source --rm api-doc
+$ docker run -v /projects/api:/work/source --rm api-doc-pipeline
 ```
 
 The resulting HTML, JS, CSS, &c. will be available in /projects/api
 alongside the original source.
+
+The filename `api.yaml` is hardcoded.
 
 ## License
 
