@@ -1,0 +1,16 @@
+#!/usr/bin/env perl
+
+use strict;
+use YAML::XS qw[ LoadFile ];
+use JSON::XS qw[ encode_json ];
+use File::Find;
+
+find(\&convert, $ARGV[0]);
+
+sub convert {
+  return unless $_ =~ /yaml$/;
+  (my $target = $_) =~ s/\.yaml$/.json/;
+  print "$_ -> $target \n";
+  open my $out, ">", $target;
+  print $out encode_json(LoadFile($_));
+}

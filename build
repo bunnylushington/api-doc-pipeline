@@ -1,0 +1,8 @@
+#!/bin/bash
+
+/work/yaml2json /work/source
+widdershins /work/source/api.yaml -o /work/slate/source/index.html.md
+
+cd /work/slate && ./deploy.sh  --source-only
+
+cp -r /work/slate/build/* /work/source
