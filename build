@@ -2,9 +2,7 @@
 
 /work/yaml2json /work/source
 widdershins \
-    --resolve \
-    --summary \
-    --omitBody \
+    --environment /work/source/widdershins.yaml \
     /work/source/api.yaml \
     -o /work/slate/source/index.html.md
 

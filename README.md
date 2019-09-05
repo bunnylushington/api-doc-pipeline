@@ -27,6 +27,25 @@ alongside the original source.
 
 The filename `api.yaml` is hardcoded.
 
+## Options
+
+Widdershins options should be set in (with the path assumptions above)
+the file `/projects/api/widdershins.yaml`.
+
+This file will look something like
+
+``` yaml
+resolve: true
+tocSummary: true
+omitBody: true
+language_tabs:
+  - http: HTTP
+  - python: Python
+  - csharp: 'C#'
+  - powershell: PowerShell
+
+```
+
 ## License
 
 MIT License
