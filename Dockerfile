@@ -13,6 +13,8 @@ WORKDIR /work
 # -- slate setup
 RUN git clone https://github.com/slatedocs/slate.git
 WORKDIR /work/slate
+RUN gem install bundler
+RUN bundler -v
 RUN bundle install
 
 
